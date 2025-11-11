@@ -17,15 +17,17 @@ Both filters work by convolving the input signal with a kernel, demonstrating ho
 
 Continuous convolution is defined as an integral:
 
-```
-(f * g)(t) = ∫ f(τ)g(t-τ) dτ
-```
+$$
+(f * g)(t) = \int f(\tau) g(t - \tau)\, d\tau
+$$
+
 
 The discrete convolution used in signal processing approximates this integral:
 
-```
-(f * g)[n] = Σ f[k]g[n-k]
-```
+$$
+(f * g)[n] = \sum_{k} f[k]\, g[n - k]
+$$
+
 
 This discrete sum is a Riemann sum approximation of the continuous integral, where the sampling interval Δt acts as the width of each rectangle in the Riemann sum.
 
@@ -43,9 +45,10 @@ The smoothed signal has smaller higher-order derivatives, making it more continu
 
 The moving average can be viewed as a Riemann sum approximation of an integral:
 
-```
-Average ≈ (1/Δt) ∫ f(t) dt ≈ (1/n) Σ f[i]
-```
+$$
+\text{Average} \approx \frac{1}{\Delta t} \int f(t)\, dt \approx \frac{1}{n} \sum_i f[i]
+$$
+
 
 Each sample point represents a rectangle in the Riemann sum, and the average approximates the integral divided by the interval width.
 
@@ -246,15 +249,6 @@ Contributions are welcome! Areas for enhancement:
 - FFT-based convolution for large kernels
 - Mobile-responsive design improvements
 - Additional visualization options
-
-## License
-
-[Specify your license here]
-
-## Acknowledgments
-
-This project demonstrates fundamental signal processing concepts and their connections to calculus, making it suitable for educational purposes in signal processin
-g, numerical methods, and applied mathematics courses.
 
 ## Example Output
 
